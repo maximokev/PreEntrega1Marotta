@@ -1,0 +1,407 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*HEADER*/
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px 10px;
+    background-color: rgba(2, 69, 21, 0.925);
+    min-height: 5rem;
+    height: 3.125rem;
+}
+
+/* Logo */
+
+.logo {
+    display: flex;
+    align-items: center;
+    width: auto;
+    height: 5rem;
+    margin-left: .625rem;
+}
+
+/* Barra de navegación */
+nav {
+    text-align: center;
+}
+
+nav ul li {
+
+    list-style: none;
+    text-align: center;
+    display: inline-flex;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #c2c0c0;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    margin:0 10px;
+}
+
+.nav {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar-toggler{
+    border-color: white;
+    color: white;
+}
+.navbar-toggler-icon{
+    background-color: white;
+}
+
+
+/*MAIN*/
+main {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/*Portadauno*/
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.foto {
+    width: 40%;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.descripcion-portada {
+    width: 60%;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: justify;
+
+}
+
+.descripcion-portada h1{
+    padding-bottom: 1.25rem;
+    color: rgb(22, 194, 33);
+    font-size: 2.8125rem;
+}
+
+.descripcion-portada p{
+    font-size: 1.125rem;
+}
+
+.imagenPortada {
+    width: 35rem;
+    border-radius: 10%;
+}
+
+/*Bloque de info*/
+.container {
+    display: flex;
+    gap: 50px; /* Espacio entre los bloques */
+    align-items: center;
+    justify-content: center;
+}
+
+.bloque {
+    padding: 15px;
+    border: 2px solid #0f5813;
+    background-color: #228e0c;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.bloque1 {
+    width: 250px; /* Tamaño del primer bloque */
+    height: 170px;
+    background-color: #317934;
+    color: white;
+}
+
+.bloque1 h2{
+
+    font-size: 1.5625rem;
+}
+
+.bloque1 p{
+
+    font-size: 1rem;
+}
+
+.bloque2 {
+    width: 300px; /* Tamaño del segundo bloque */
+    height: 200px;
+    background-color: #205d22;
+    color: white;
+}
+
+.bloque2 h2{
+
+    font-size: 2rem;
+}
+
+.bloque2 p{
+
+    font-size: 1.125rem;
+}
+
+.bloque3 {
+    width: 350px; /* Tamaño del tercer bloque */
+    height: 225px;
+    margin-bottom: 1.875rem;
+    background-color: #0d360f;
+    color: white;
+}
+
+.bloque3 p{
+
+    font-size: 1.25rem;
+}
+
+
+/*Cotiza tu prestamo*/
+
+h1 {
+    margin-top: 1.5625rem;
+    padding-bottom: 1.25rem;
+    color: #00bcd4; /* Color Aqua */
+    font-size: 2.8125rem;
+    font-family: 'Arial', sans-serif; /* Puedes cambiar la fuente si prefieres */
+    animation: pulse 2s ease-in-out infinite;
+    text-align: center;
+}
+
+/* Animacion de pulsación */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+p{
+    font-size: 1.25rem;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.contenedor h2{
+    color:#394039;
+}
+
+/* Estilo de la tarjeta */
+.tarjeta {
+    background-color:#a2c2e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 500px;
+    transform: translateY(-20px);
+    opacity: 0;
+    animation: fadeInUp 1s forwards;
+}
+
+/* Animación de aparición de la tarjeta */
+@keyframes fadeInUp {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Estilo de los grupos de formulario */
+.grupo-formulario {
+    margin-bottom: 15px;
+}
+
+.grupo-formulario label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.grupo-formulario input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Estilo del botón */
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para los mensajes de error */
+.error-message {
+    color: #e74c3c;
+    font-size: 1rem;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+/* Estilos para el resultado (popup) */
+.resultado {
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #d0f0c0;
+    color:#394039;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Clase para mostrar la alerta */
+.mostrar {
+    display: block;
+}
+
+/*Nosotros*/
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+}
+
+.foto {
+    width: 40%;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.descripcion-nosotros {
+    width: 60%;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: justify;
+}
+
+.imagen {
+    width: 100%;
+    height: 18rem;
+    border-radius: 10%;
+}
+
+
+/*Footer*/
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, rgba(34, 132, 42, 0.8), rgba(20, 70, 30, 0.8)); /* Gradiente de fondo */
+    color: #FFF;    /* Color del texto en el footer */
+    padding: 20px;
+    height: auto;
+    margin-top: 1.25rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Sombra para profundidad */
+    opacity: 0; /* Inicialmente oculto para la animación de entrada */
+    transform: translateY(50px); /* Inicialmente desplazado hacia abajo */
+    transition: background 0.5s ease, opacity 1s ease, transform 1s ease;
+}
+
+/* Animación de entrada para el footer */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+footer {
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+/* Estilo para el texto de copyright */
+.Copyright p {
+    text-transform: initial;
+    text-align: center;
+    font-size: 1rem;
+    font-style: oblique;
+    color: white;
+    margin: 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Sombra ligera para el texto */
+    transition: color 0.3s, transform 0.3s;
+}
+
+/* Transición en el color y efecto de escala en el texto de copyright */
+.Copyright p:hover {
+    color: #d4edda; /* Color verde claro para el hover */
+    transform: scale(1.05); /* Efecto de escala al pasar el cursor */
+}
+
+/* Estilo para los íconos de redes sociales */
+.redes-sociales {
+    padding-top: 1.25rem;
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px; /* Espacio entre los íconos */
+}
+
+/* Animación para los íconos de redes sociales */
+.redes-sociales img {
+    width: 2.5rem;
+    height: 2.5rem; /* Tamaño ligeramente mayor */
+    padding: 5px;
+    border-radius: 50%; /* Bordes redondeados para los íconos */
+    transition: transform 0.3s, filter 0.3s, box-shadow 0.3s, background-color 0.3s;
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo semitransparente */
+}
+
+/* Efecto de escala, rotación y cambio de fondo en los íconos */
+.redes-sociales img:hover {
+    transform: scale(1.2) rotate(15deg); /* Escala y rotación en hover */
+    filter: brightness(1.3); /* Aumenta el brillo */
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4); /* Sombra más pronunciada */
+    background-color: rgba(255, 255, 255, 0.4); /* Fondo más brillante en hover */
+}
+
+/* Estilo para los textos dentro de redes sociales, si hay */
+.redes-sociales p {
+    color: white;
+}
