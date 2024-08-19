@@ -4,16 +4,35 @@
     box-sizing: border-box;
 }
 
+/*BODY*/
+body{
+    background-color: #F0F0F0; /* Fondo gris claro */
+    color: #333333; /* Texto oscuro para buen contraste */
+}
+
 /*HEADER*/
-header{
+header {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 10px 10px;
-    background-color: rgba(2, 69, 21, 0.925);
+    padding: 15px 20px;
+    background: linear-gradient(135deg, rgba(2, 69, 21, 0.925), rgba(10, 90, 20, 0.8));
     min-height: 5rem;
     height: 3.125rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    font-family: 'Arial', sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+header:hover {
+    background: linear-gradient(135deg, rgba(10, 90, 20, 0.8), rgba(2, 69, 21, 0.925));
+    transform: scale(1.02);
 }
 
 /* Logo */
@@ -214,7 +233,7 @@ p{
 }
 
 .contenedor h2{
-    color:#394039;
+    color:#606d60;
 }
 
 /* Estilo de la tarjeta */
@@ -284,8 +303,8 @@ button:hover {
 .resultado {
     padding: 15px;
     border-radius: 8px;
-    background-color: #d0f0c0;
-    color:#394039;
+    background-color: #B3E5FC;
+    color: #4A4A4A;
     margin-top: 20px;
     text-align: center;
 }
