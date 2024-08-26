@@ -143,10 +143,15 @@ main {
 }
 
 .bloque1 {
-    width: 250px; /* Tamaño del primer bloque */
+    width: 250px; /* Tamaño del bloque */
     height: 170px;
     background-color: #317934;
     color: white;
+    transition: transform 0.3s ease; /* Suaviza el efecto de zoom */
+}
+
+.bloque1:hover {
+    transform: scale(1.1); /* Aumenta el tamaño al 110% */
 }
 
 .bloque1 h2{
@@ -164,6 +169,11 @@ main {
     height: 200px;
     background-color: #205d22;
     color: white;
+    transition: transform 0.3s ease; /* Suaviza el efecto de zoom */
+}
+
+.bloque2:hover {
+    transform: scale(1.1); /* Aumenta el tamaño al 110% */
 }
 
 .bloque2 h2{
@@ -182,6 +192,11 @@ main {
     margin-bottom: 1.875rem;
     background-color: #0d360f;
     color: white;
+    transition: transform 0.3s ease; /* Suaviza el efecto de zoom */
+}
+
+.bloque3:hover {
+    transform: scale(1.1); /* Aumenta el tamaño al 110% */
 }
 
 .bloque3 p{
