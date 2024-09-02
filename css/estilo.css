@@ -324,10 +324,34 @@ button:hover {
     text-align: center;
 }
 
-/* Clase para mostrar la alerta */
-.mostrar {
-    display: block;
+/* Estilos para el mensaje de éxito */
+#mensaje-exito {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    color: #155724; /* Color del texto (verde oscuro) */
+    background-color: #d4edda; /* Fondo verde claro */
+    border-color: #c3e6cb; /* Borde verde claro */
+    font-size: 1.25rem;
+    text-align: center;
+    text-decoration: underline;
+    font-weight: 500;
+    display: none; /* Inicialmente oculto */
+    opacity: 0; /* Inicialmente invisible */
+    transition: opacity 0.3s ease-in-out; /* Transición suave para el desvanecimiento */
 }
+
+/* Efecto de desvanecimiento para el mensaje de éxito */
+#mensaje-exito.show {
+    display: block; /* Mostrar el mensaje */
+    opacity: 1; /* Hacer el mensaje completamente visible */
+}
+
+#mensaje-exito.hide {
+    opacity: 0; /* Hacer el mensaje invisible */
+}
+
 
 /*Nosotros*/
 
@@ -360,61 +384,41 @@ button:hover {
 
 footer {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column; /* Alinea los elementos en columna para que el contenido vertical se distribuya mejor */
+    justify-content: center;
     align-items: center;
     background: linear-gradient(135deg, rgba(34, 132, 42, 0.8), rgba(20, 70, 30, 0.8)); /* Gradiente de fondo */
-    color: #FFF;    /* Color del texto en el footer */
-    padding: 20px;
-    height: auto;
+    color: #FFF; /* Color del texto en el footer */
+    padding: 40px; /* Aumenta el padding para hacer el footer más alto */
+    min-height: 200px; /* Establece una altura mínima para el footer */
+    width: 100%; /* Asegura que el footer ocupe todo el ancho del viewport */
     margin-top: 1.25rem;
     position: relative;
     overflow: hidden;
     border-radius: 10px; /* Bordes redondeados */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Sombra para profundidad */
-    opacity: 0; /* Inicialmente oculto para la animación de entrada */
-    transform: translateY(50px); /* Inicialmente desplazado hacia abajo */
-    transition: background 0.5s ease, opacity 1s ease, transform 1s ease;
-}
-
-/* Animación de entrada para el footer */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-footer {
-    animation: fadeInUp 1s ease-out forwards;
+    opacity: 1; /* Asegura que el footer sea visible */
+    transform: translateY(0); /* Elimina el desplazamiento inicial */
+    transition: none; /* Elimina las transiciones de animación */
+    text-align: center; /* Centra el texto y contenido dentro del footer */
 }
 
 /* Estilo para el texto de copyright */
 .Copyright p {
+    margin-top: .3125rem;
     text-transform: initial;
-    text-align: center;
     font-size: 1rem;
     font-style: oblique;
     color: white;
     margin: 0;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Sombra ligera para el texto */
-    transition: color 0.3s, transform 0.3s;
-}
-
-/* Transición en el color y efecto de escala en el texto de copyright */
-.Copyright p:hover {
-    color: #d4edda; /* Color verde claro para el hover */
-    transform: scale(1.05); /* Efecto de escala al pasar el cursor */
 }
 
 /* Estilo para los íconos de redes sociales */
 .redes-sociales {
     padding-top: 1.25rem;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center; /* Centra los íconos en el contenedor */
     gap: 15px; /* Espacio entre los íconos */
 }
 
@@ -435,8 +439,32 @@ footer {
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4); /* Sombra más pronunciada */
     background-color: rgba(255, 255, 255, 0.4); /* Fondo más brillante en hover */
 }
+/* Estilos generales del botón */
+.btn {
+    display: inline-block;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 15px; /* Aumenta el valor para bordes más redondeados */
+    padding: 10px 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
 
-/* Estilo para los textos dentro de redes sociales, si hay */
-.redes-sociales p {
-    color: white;
+/* Estilos específicos del botón primario */
+.btn-primary {
+    background-color: #007bff; /* Color de fondo azul */
+    color: white; /* Color del texto blanco */
+    border: 2px solid transparent;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Color de fondo más oscuro al pasar el ratón */
+    transform: scale(1.05); /* Efecto de ampliación sutil al pasar el ratón */
+}
+
+.btn-primary:focus {
+    outline: none; /* Elimina el contorno predeterminado en el enfoque */
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* Sombra de enfoque azul */
 }
