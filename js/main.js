@@ -65,18 +65,6 @@ const calcularPrestamo = () => {
     const pagoTotal = pagoMensual * prestamo.meses;
     const interesesTotales = pagoTotal - prestamo.monto;
 
-    // Mostrar el resultado en la consola
-    console.log('Resumen del Préstamo');
-    console.log(`Nombre: ${prestamo.nombre} ${prestamo.apellido}`);
-    console.log(`Dni: ${prestamo.dni}`);
-    console.log(`Correo electrónico: ${prestamo.email}`);
-    console.log(`Monto del préstamo: ${prestamo.monto}`);
-    console.log(`Tasa de interés anual: ${prestamo.tasa}%`);
-    console.log(`Número de meses: ${prestamo.meses}`);
-    console.log(`Pago mensual: ${pagoMensual.toFixed(2)}`);
-    console.log(`Pago total: ${pagoTotal.toFixed(2)}`);
-    console.log(`Intereses totales: ${interesesTotales.toFixed(2)}`);
-
     // Mostrar el resultado en el HTML
     const resultadoDiv = document.getElementById('resultado');
     if (resultadoDiv) {
@@ -122,6 +110,17 @@ const calcularPrestamo = () => {
     console.log('Datos guardados en localStorage:', localStorage.getItem('prestamo'));
 };
 
+// Función para manejar el botón Solicitar Ahora
+const manejarSolicitarAhora = () => {
+    // Mostrar un mensaje de confirmación usando SweetAlert
+    Swal.fire({
+        title: 'Felicitaciones!',
+        text: 'Te estaremos contactando a la brevedad por e-mail para finalizar la gestión.',
+        icon: 'success',
+        confirmButtonText: 'Aceptar'
+    });
+};
+
 // Recuperar los datos del localStorage al cargar la página
 window.onload = () => {
     const prestamoGuardado = JSON.parse(localStorage.getItem('prestamo'));
@@ -130,8 +129,8 @@ window.onload = () => {
         idsCampos.forEach(id => {
             const campo = document.getElementById(id);
             if (campo) {
-                campo.value = (id === 'monto' || id === 'tasa') 
-                    ? prestamoGuardado[id].toFixed(2) 
+                campo.value = (id === 'monto' || id === 'tasa')
+                    ? prestamoGuardado[id].toFixed(2)
                     : prestamoGuardado[id];
             }
         });
@@ -142,4 +141,7 @@ window.onload = () => {
         // Si no hay datos en localStorage
         console.log('No hay datos de préstamo en localStorage.');
     }
+
+    // Configurar el evento del botón Solicitar Ahora
+    document.getElementById('solicitarAhora')?.addEventListener('click', manejarSolicitarAhora);
 };
